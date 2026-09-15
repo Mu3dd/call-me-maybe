@@ -1,22 +1,33 @@
-.PHONY: install run debug clean lint lint-strict
+
+PYTHON := uv run python3
 
 install:
 	uv sync
 
 run:
-	uv run python -m src
+	$(PYTHON) -m src
 
 debug:
-	uv run python -m pdb -m src
+	$(PYTHON) -m pdb -m src
 
 clean:
-	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
-	rm -rf .mypy_cache .pytest_cache
+	find . -type d -name "__pycache__" -exec rm -rf {} +
+	find . -type d -name ".mypy_cache" -exec rm -rf {} +
+	find . -type d -name ".pytest_cache" -exec rm -rf {} +
+	find . -type d -name ".ruff_cache" -exec rm -rf {} +
+	find . -type f -name "*.pyc" -delete
 
 lint:
-	uv run flake8 .
-	uv run mypy . --warn-return-any --warn-unused-ignores --ignore-missing-imports --disallow-untyped-defs --check-untyped-defs
+	uv run flake8 src
+	uv run mypy src \
+		--warn-return-any \
+		--warn-unused-ignores \
+		--ignore-missing-imports \
+		--disallow-untyped-defs \
+		--check-untyped-defs
 
 lint-strict:
-	uv run flake8 .
-	uv run mypy . --strict
+	uv run flake8 src
+	uv run mypy src --strict
+
+.PHONY: install run debug clean lint lint-strict

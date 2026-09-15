@@ -1,7 +1,71 @@
 [
-  { "prompt": "What is the sum of 2 and 3?" },
-  { "prompt": "What is the sum of 265 and 345?" },
-  { "prompt": "Greet shrek" },
-  { "prompt": "Greet john" },
-  { "prompt": "Reverse the string 'hello'" }
+  {
+    "prompt": "Replace all vowels in 'Programming is fun parameters' with \"\\\"\\\""
+  },
+  {
+    "prompt": "Replace every digit in 'abc123xyz' using regex \"\\\\d+\" with \"#\""
+  },
+  {
+    "prompt": "Replace every word boundary in 'the cat sat' using regex \"\\\\bcat\\\\b\" with \"dog\""
+  },
+  {
+    "prompt": "Replace every tab \"\\\\t\" with four spaces"
+  },
+  {
+    "prompt": "Replace every newline \"\\\\n\" with a space"
+  },
+  {
+    "prompt": "Replace \"C:\\\\Users\\\\Admin\" with \"/home/admin\""
+  },
+  {
+    "prompt": "Replace \"\\\\\\\\server\\\\share\" with \"/mnt/share\""
+  },
+  {
+    "prompt": "Replace the string \"\\\"Hello\\\"\" with \"Hi\""
+  },
+  {
+    "prompt": "Replace the string \"\\\\\\\"\" with \"!\""
+  },
+  {
+    "prompt": "Replace the regex \"[aeiouAEIOU]\" with \"*\""
+  },
+  {
+    "prompt": "Replace the regex \"[A-Z]+\\\\d*\" with \"TOKEN\""
+  },
+  {
+    "prompt": "Replace the string \"\\\\\\\\\" with \"\\\\\""
+  },
+  {
+    "prompt": "Replace the string \"\\\\\" with \"\\\\\\\\\""
+  },
+  {
+    "prompt": "Replace the Unicode escape \"\\\\u00E9\" with \"e\""
+  },
+  {
+    "prompt": "Replace \"{\\\"name\\\":\\\"John\\\"}\" with \"{}\""
+  },
+  {
+    "prompt": "Replace every occurrence of \"\\\\\" in \"C:\\\\Windows\\\\System32\" with \"/\""
+  },
+  {
+    "prompt": "Replace every occurrence of \"\\\"\" with \"'\""
+  },
+  {
+    "prompt": "Replace every occurrence of \"\\\\\\\\\\\\\" with \"X\""
+  },
+  {
+    "prompt": "Replace every occurrence of \"\\\\\\\\\\\\\\\\\" with \"Y\""
+  },
+  {
+    "prompt": "Replace \"abc\\\\\" with \"xyz\""
+  },
+  {
+    "prompt": "Replace \"\\\\abc\" with \"xyz\""
+  },
+  {
+    "prompt": "Replace every match of regex \"\\\\w+\\\\s+\\\\w+\" with \"PAIR\""
+  },
+  {
+    "prompt": "Replace every match of regex \"\\\\d{2,4}\" with \"NUM\""
+  }
 ]
